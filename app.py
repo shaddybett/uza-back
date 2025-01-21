@@ -1,8 +1,14 @@
-from flask import Flask
+from flask import Flask, request
 from flask_restful import Api,Resource
+from flask_jwt_extended import JWTManager, create_access_token
+from marshmallow import ValidationError
 from models import User,db
+from schemas import UserSchema
+from utils import error_response, success_response
+from config import Config
 
 app = Flask(__name__)
+app.config.from_object(Config)
 api = Api(app)
 
 password_pattern
