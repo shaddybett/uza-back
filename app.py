@@ -11,8 +11,6 @@ app = Flask(__name__)
 app.config.from_object(Config)
 api = Api(app)
 
-password_pattern
-email pattern
 
 class Signup(Resource):
     @jwt_required
