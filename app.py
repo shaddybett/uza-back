@@ -10,6 +10,7 @@ from config import Config
 app = Flask(__name__)
 app.config.from_object(Config)
 api = Api(app)
+
 class Signup(Resource):
     @jwt_required
     def signup(post):
